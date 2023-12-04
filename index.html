@@ -21,35 +21,64 @@
         <main class="my-margin-top">
            <div class="container-fluid">
                <div class="row">
-                   <div class="col-auto col-md-6 col-lg-4 mx-auto border rounded bg-warning p-4" id="myTicket">
-                       <h1 class="p-4 rounded text-center">Inserisci i tuoi dati!</h1>
-                       <form class="d-flex flex-wrap">
-                            <div class="col-4 mb-3 px-2">
-                                <label for="name" class="form-label">Nome e Cognome:</label>
-                                <input type="text" id="name" class="form-control">
+                   <div class="col-auto col-md-6 col-lg-4 mx-auto border border-black border-3 rounded bg-warning p-4" id="myTicket">
+                        <div class="row">
+                            <h1 class="p-4 rounded text-center">Inserisci i tuoi dati!</h1>
+                            <form class="d-flex flex-wrap">
+                                <div class="col-4 mb-3 px-2">
+                                    <label for="name" class="form-label">Nome e Cognome:</label>
+                                    <input type="text" id="name" class="form-control">
+                                </div>
+                                <div class="col-4 mb-3 px-2">
+                                    <label for="km" class="form-label">Km da percorrere:</label>
+                                    <input type="text" id="km" class="form-control">
+                                </div>
+                                <div class="col-4 mb-3 px-2">
+                                    <label for="range" class="form-label">Fascia d'età:</label>
+                                    <select id="range" class="form-select">
+                                        <option value="adult">Adulto</option>
+                                        <option value="child">Bambino</option>
+                                        <option value="senior">Anziano</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div> 
+                        <div class="row mb">
+                            <div class="col-6 offset-3 position-relative mb-5">
+                                <button type="submit" id="special-button" class="btn btn-primary px-4 mx-1 position-absolute end-50">Calcola</button>
+                                <button type="reset" class="btn btn-primary px-4 mx-1 position-absolute start-50">Annulla</button>
                             </div>
-                            <div class="col-4 mb-3 px-2">
-                                <label for="km" class="form-label">Km da percorrere:</label>
-                                <input type="text" id="km" class="form-control">
-                            </div>
-                            <div class="col-4 mb-3 px-2">
-                                <label for="km" class="form-label">Fascia d'età:</label>
-                                <select id="disabledSelect" class="form-select">
-                                    <option value="adult">Adulto</option>
-                                    <option value="child">Bambino</option>
-                                    <option value="senior">Anziano</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-primary px-2">Submit</button>
-                            <button type="reset" class="btn btn-primary px-2">Submit</button>
-                            </fieldset>
-                      </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-auto col-md-6 col-lg-4 mx-auto border rounded bg-warning p-4" id="myTicket">
-                        <h1 class="p-4 rounded text-center">Ecco il tuo biglietto!</h1>
-                        <p class="text-center rounded p-4">
-                        </p>
+                <div class="row my-2">
+                    <div class="col-auto col-md-6 col-lg-4 mx-auto border border-black border-3 rounded bg-success p-4" id="myTicket">
+                        <div class="row">
+                            <h1 class="p-4 rounded text-center">Ecco il tuo biglietto!</h1>
+                        </div>
+                        <div class="row">
+                            <h4>DETTAGLIO BIGLIETTO</h4>
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col" class="bg-dark-subtle">Nome Passeggero</th>
+                                    <th scope="col">Offerta</th>
+                                    <th scope="col">Carrozza</th>
+                                    <th scope="col">Codice CP</th>
+                                    <th scope="col">Costo Biglietto</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row" id="user-name" class="bg-dark-subtle"></th>
+                                    <td>Biglietto Standard</td>
+                                    <td id="wagon"></td>
+                                    <td id="code"></td>
+                                    <td id="ticket-price"></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
                     </div>
                 </div>
                </div>
