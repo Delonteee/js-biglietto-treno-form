@@ -74,7 +74,7 @@ myButton.addEventListener('click', function() {
     resultName.innerHTML = `${myName.value}`;
     resultWagon.innerHTML = myWagon;
     resultCode.innerHTML = myCode;
-    resultPrice.innerHTML = price;
+    resultPrice.innerHTML = price + ' €';
 
 } )
 
