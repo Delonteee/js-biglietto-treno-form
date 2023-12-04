@@ -67,11 +67,13 @@ myButton.addEventListener('click', function() {
     console.log('myCode', myCode, typeof myCode);
 
     const resultName = document.getElementById('user-name');
+    const resultType = document.getElementById('type');
     const resultWagon = document.getElementById('wagon');
     const resultCode = document.getElementById('code');
     const resultPrice = document.getElementById('ticket-price');
 
     resultName.innerHTML = `${myName.value}`;
+    resultType.innerHTML = 'Biglietto Standard';
     resultWagon.innerHTML = myWagon;
     resultCode.innerHTML = myCode;
     resultPrice.innerHTML = price + ' €';
