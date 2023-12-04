@@ -52,10 +52,15 @@ myButton.addEventListener('click', function() {
     let price = (kmInNumero * 0.21);
     console.log('price', price, typeof price);
 
+    let myType = 'Biglietto Standard';
+
     if (myRange.value == 'child'){
         price *= 0.8;
+        myType = 'Biglietto Ridotto';
+
     } else if (myRange.value == 'senior'){
         price *= 0.6;
+        myType = 'Biglietto Senior';
     }
 
     price = price.toFixed(2);
@@ -73,7 +78,7 @@ myButton.addEventListener('click', function() {
     const resultPrice = document.getElementById('ticket-price');
 
     resultName.innerHTML = `${myName.value}`;
-    resultType.innerHTML = 'Biglietto Standard';
+    resultType.innerHTML = myType;
     resultWagon.innerHTML = myWagon;
     resultCode.innerHTML = myCode;
     resultPrice.innerHTML = price + ' €';
